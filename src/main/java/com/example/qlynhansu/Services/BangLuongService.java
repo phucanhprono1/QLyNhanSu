@@ -2,15 +2,16 @@ package com.example.qlynhansu.Services;
 
 import java.util.List;
 
+import com.example.qlynhansu.DAO.BangLuongDAO;
+import com.example.qlynhansu.Entities.BangLuong;
+import com.example.qlynhansu.Repositories.BangLuongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import DAO.BangLuongDAO;
-import Entities.BangLuong;
-import Imp.BangLuongImp;
+
 
 @Service
-public class BangLuongService implements BangLuongImp {
+public class BangLuongService implements BangLuongRepository {
 	
 	@Autowired
 	BangLuongDAO bangluongDAO;

@@ -2,6 +2,9 @@ package com.example.qlynhansu.Services;
 
 import java.util.List;
 
+import com.example.qlynhansu.DAO.TaiKhoanDAO;
+import com.example.qlynhansu.Entities.TaiKhoan;
+import com.example.qlynhansu.Repositories.TaiKhoanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +12,7 @@ import DAO.TaiKhoanDAO;
 import Entities.TaiKhoan;
 import Imp.TaiKhoanImp;
 @Service
-public class TaiKhoanService implements TaiKhoanImp{
+public class TaiKhoanService implements TaiKhoanRepository {
 	
 	@Autowired
 	TaiKhoanDAO taikhoanDAO;

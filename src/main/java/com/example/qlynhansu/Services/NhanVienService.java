@@ -3,15 +3,14 @@ package com.example.qlynhansu.Services;
 import java.sql.Date;
 import java.util.List;
 
+import com.example.qlynhansu.DAO.NhanVienDAO;
+import com.example.qlynhansu.Entities.NhanVien;
+import com.example.qlynhansu.Repositories.NhanVienRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import DAO.NhanVienDAO;
-import Entities.NhanVien;
-import Imp.NhanVienImp;
-
 @Service
-public class NhanVienService implements NhanVienImp {
+public class NhanVienService implements NhanVienRepository {
 
 	@Autowired
 	NhanVienDAO nhanvienDAO;

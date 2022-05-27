@@ -2,6 +2,9 @@ package com.example.qlynhansu.Services;
 
 import java.util.List;
 
+import com.example.qlynhansu.DAO.PhongBanDAO;
+import com.example.qlynhansu.Entities.PhongBan;
+import com.example.qlynhansu.Repositories.PhongBanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +13,7 @@ import Entities.PhongBan;
 import Imp.PhongBanImp;
 
 @Service
-public class PhongBanService implements PhongBanImp{
+public class PhongBanService implements PhongBanRepository {
 	
 	@Autowired
 	PhongBanDAO phongbanDAO;

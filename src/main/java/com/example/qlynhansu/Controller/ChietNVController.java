@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import com.example.qlynhansu.Entities.*;
+import com.example.qlynhansu.Services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,16 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import Entities.BangLuong;
-import Entities.ChucVu;
-import Entities.NhanVien;
-import Entities.PhongBan;
-import Entities.TrinhDoHocVan;
-import Services.BangLuongService;
-import Services.ChucVuService;
-import Services.NhanVienService;
-import Services.PhongBanService;
-import Services.TrinhDoHocVanService;
+
 
 @Controller
 @RequestMapping("/chitietnv")

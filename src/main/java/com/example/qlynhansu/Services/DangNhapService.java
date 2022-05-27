@@ -1,13 +1,14 @@
 package com.example.qlynhansu.Services;
 
+import com.example.qlynhansu.DAO.DangNhapDAO;
+import com.example.qlynhansu.Entities.TaiKhoan;
+import com.example.qlynhansu.Repositories.DangNhapRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import DAO.DangNhapDAO;
-import Entities.TaiKhoan;
-import Imp.DangNhapImp;
+
 
 @Service
-public class DangNhapService implements DangNhapImp{
+public class DangNhapService implements DangNhapRepository {
 	
 	@Autowired
 	DangNhapDAO dangnhapDAO;

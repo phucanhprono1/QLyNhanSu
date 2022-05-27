@@ -4,6 +4,9 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.example.qlynhansu.DAO.HopDongLDDAO;
+import com.example.qlynhansu.Entities.HopDongLaoDong;
+import com.example.qlynhansu.Repositories.HopDongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +15,7 @@ import Entities.HopDongLaoDong;
 import Imp.HopDongLDImp;
 
 @Service
-public class HopDongLDService implements HopDongLDImp {
+public class HopDongLDService implements HopDongRepository {
 	
 	@Autowired
 	HopDongLDDAO hopdongldDAO;
