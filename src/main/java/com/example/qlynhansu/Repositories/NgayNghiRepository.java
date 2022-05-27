@@ -7,7 +7,7 @@ import java.util.List;
 import com.example.qlynhansu.Entities.NgayNghi;
 import org.springframework.data.repository.CrudRepository;
 
-public interface NgayNghiRepository extends CrudRepository<NgayNghi,String> {
+public interface NgayNghiRepository {
 	NgayNghi LayDanhSachNhanVien(Date ngaynghi);
 
 	boolean ThemNgayNghi(NgayNghi ngaynghi);

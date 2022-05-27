@@ -3,6 +3,7 @@ package com.example.qlynhansu.Services;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 import com.example.qlynhansu.DAO.HopDongLDDAO;
 import com.example.qlynhansu.Entities.HopDongLaoDong;
@@ -10,9 +11,7 @@ import com.example.qlynhansu.Repositories.HopDongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import DAO.HopDongLDDAO;
-import Entities.HopDongLaoDong;
-import Imp.HopDongLDImp;
+
 
 @Service
 public class HopDongLDService implements HopDongRepository {
@@ -44,6 +43,4 @@ public class HopDongLDService implements HopDongRepository {
 		// TODO Auto-generated method stub
 		return hopdongldDAO.XoaHD(mahd);
 	}
-	
-
 }

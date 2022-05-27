@@ -5,6 +5,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.example.qlynhansu.Entities.NgayNghi;
+import com.example.qlynhansu.Entities.NhanVien;
+import com.example.qlynhansu.Services.NgayNghiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -12,9 +15,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import Entities.NgayNghi;
-import Entities.NhanVien;
-import Services.NgayNghiService;
 
 @Controller
 @RequestMapping("/themngaynghi")

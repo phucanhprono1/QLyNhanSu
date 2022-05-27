@@ -4,6 +4,10 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
+import com.example.qlynhansu.DAO.NgayNghiDAO;
+import com.example.qlynhansu.Entities.NgayNghi;
+import com.example.qlynhansu.Entities.NhanVien;
+import com.example.qlynhansu.Services.NhanVienService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -11,11 +15,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import DAO.NgayNghiDAO;
-import Entities.NgayNghi;
-import Entities.NhanVien;
-import Services.NhanVienService;
 
 @Controller
 @RequestMapping("/xemngaynghi")

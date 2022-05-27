@@ -6,6 +6,8 @@ import com.example.qlynhansu.Repositories.DangKyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 
 @Service
 public class DangKyService implements DangKyRepository {
@@ -16,6 +18,4 @@ public class DangKyService implements DangKyRepository {
 		boolean kiemtra = dangkyDAO.DangKy(taikhoan); 
 		return kiemtra;
 	}
-	
-
 }

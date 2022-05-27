@@ -5,7 +5,7 @@ import java.util.List;
 import com.example.qlynhansu.Entities.TaiKhoan;
 import org.springframework.data.repository.CrudRepository;
 
-public interface TaiKhoanRepository extends CrudRepository<TaiKhoan,String> {
+public interface TaiKhoanRepository {
 	
 	List<TaiKhoan> LayDanhTaiKhoan();
 	

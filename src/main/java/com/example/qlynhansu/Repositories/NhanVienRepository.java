@@ -7,7 +7,7 @@ import java.util.List;
 import com.example.qlynhansu.Entities.NhanVien;
 import org.springframework.data.repository.CrudRepository;
 
-public interface NhanVienRepository extends CrudRepository<NhanVien,String> {
+public interface NhanVienRepository {
 	
 	List<NhanVien> LayDanhSachNhanVien();
 	

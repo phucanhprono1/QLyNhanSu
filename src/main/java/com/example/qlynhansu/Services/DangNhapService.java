@@ -6,6 +6,7 @@ import com.example.qlynhansu.Repositories.DangNhapRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 
 @Service
 public class DangNhapService implements DangNhapRepository {
@@ -23,8 +24,4 @@ public class DangNhapService implements DangNhapRepository {
 		// TODO Auto-generated method stub
 		return dangnhapDAO.LayTaiKhoan(tentaikhoan, matkhau);
 	}
-
-	
-	
-	
 }

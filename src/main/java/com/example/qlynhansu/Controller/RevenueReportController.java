@@ -7,6 +7,9 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.example.qlynhansu.Entities.NhanVien;
+import com.example.qlynhansu.Services.NgayNghiService;
+import com.example.qlynhansu.Services.NhanVienService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.ServletRequestUtils;
@@ -14,9 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
-import Entities.NhanVien;
-import Services.NgayNghiService;
-import Services.NhanVienService;
 
 public class RevenueReportController extends AbstractController{
 	

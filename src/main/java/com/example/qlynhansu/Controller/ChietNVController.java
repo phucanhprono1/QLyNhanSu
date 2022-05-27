@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 
-
 @Controller
 @RequestMapping("/chitietnv")
 @SessionAttributes("suanv")

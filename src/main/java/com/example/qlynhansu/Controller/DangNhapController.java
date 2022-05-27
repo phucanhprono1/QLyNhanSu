@@ -1,23 +1,15 @@
 package com.example.qlynhansu.Controller;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
+import com.example.qlynhansu.Entities.TaiKhoan;
+import com.example.qlynhansu.Services.DangNhapService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 
-import Entities.TaiKhoan;
-import Services.DangNhapService;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 
 @Controller

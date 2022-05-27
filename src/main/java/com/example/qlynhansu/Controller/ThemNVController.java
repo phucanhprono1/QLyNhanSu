@@ -1,10 +1,5 @@
 package com.example.qlynhansu.Controller;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.List;
-
 import com.example.qlynhansu.Entities.*;
 import com.example.qlynhansu.Services.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.sql.Date;
+import java.util.List;
+import java.util.Objects;
 
 @Controller
 @RequestMapping("/themnv")
@@ -64,8 +62,8 @@ public class ThemNVController {
 			@RequestParam String diemyeu,@RequestParam Date ngayvaoct, @RequestParam float bacluong, @RequestParam float bacphucap,
 			ModelMap modelMap) {
 		
-		if(manv==""||honv==""||tennv==""||dantoc==""||sdt==""||quequan==""||diachi==""||email==""||cmnd==""||
-				diemmanh==""||diemyeu==""||bacluong==0||bacphucap==0) {
+		if(manv.equals("") || Objects.equals(honv, "") || Objects.equals(tennv, "") || dantoc.equals("") || sdt.equals("") || quequan.equals("") || diachi.equals("") || Objects.equals(email, "") || cmnd.equals("") ||
+				Objects.equals(diemmanh, "") || Objects.equals(diemyeu, "") ||bacluong==0||bacphucap==0) {
 			Default(modelMap);
 			modelMap.addAttribute("thongbao", "Chưa điền đủ thông tin");
 			return"themnv";

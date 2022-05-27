@@ -1,5 +1,7 @@
 package com.example.qlynhansu.Controller;
 
+import com.example.qlynhansu.Entities.PhongBan;
+import com.example.qlynhansu.Services.PhongBanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -8,8 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import Entities.PhongBan;
-import Services.PhongBanService;
 
 @Controller
 @RequestMapping("/thempb")
@@ -43,11 +43,5 @@ public class ThemPBController {
 			modelMap.addAttribute("thongbao","Mã phòng ban đã tồn tại!");
 			return "thempb";
 		}
-		
-		
-		
-	
-		
 	}
-
 }

@@ -6,7 +6,7 @@ import java.util.List;
 import com.example.qlynhansu.Entities.ChucVu;
 import org.springframework.data.repository.CrudRepository;
 
-public interface ChucVuResporitory extends CrudRepository<ChucVu,String> {
+public interface ChucVuResporitory {
 
 	List<ChucVu> LayDanhChucVu();
 	

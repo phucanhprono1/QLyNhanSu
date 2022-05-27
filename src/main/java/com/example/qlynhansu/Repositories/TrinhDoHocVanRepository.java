@@ -5,7 +5,7 @@ import java.util.List;
 import com.example.qlynhansu.Entities.TrinhDoHocVan;
 import org.springframework.data.repository.CrudRepository;
 
-public interface TrinhDoHocVanRepository extends CrudRepository<TrinhDoHocVan,String> {
+public interface TrinhDoHocVanRepository {
 	
 	List<TrinhDoHocVan> LayDSTrinhDoHV();
 

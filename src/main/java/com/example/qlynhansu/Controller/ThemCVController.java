@@ -1,5 +1,7 @@
 package com.example.qlynhansu.Controller;
 
+import com.example.qlynhansu.Entities.ChucVu;
+import com.example.qlynhansu.Services.ChucVuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -8,15 +10,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import Entities.ChucVu;
-import Services.ChucVuService;
-
 @Controller
 @RequestMapping("/themcv")
 public class ThemCVController {
 	
 	@Autowired
-	ChucVuService chucvuService; 
+	ChucVuService chucvuService;
 	
 	@GetMapping
 	public String Default() {

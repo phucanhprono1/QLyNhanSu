@@ -1,13 +1,13 @@
 package com.example.qlynhansu.Services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.example.qlynhansu.DAO.TrinhDoHocVanDAO;
 import com.example.qlynhansu.Entities.TrinhDoHocVan;
 import com.example.qlynhansu.Repositories.TrinhDoHocVanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 @Service
 public class TrinhDoHocVanService implements TrinhDoHocVanRepository {
@@ -39,6 +39,4 @@ public class TrinhDoHocVanService implements TrinhDoHocVanRepository {
 		// TODO Auto-generated method stub
 		return trinhdohocvanDAO.XoaHV(mahv);
 	}
-	
-
 }

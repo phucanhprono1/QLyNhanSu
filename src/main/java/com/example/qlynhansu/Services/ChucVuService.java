@@ -1,13 +1,13 @@
 package com.example.qlynhansu.Services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.example.qlynhansu.DAO.ChucVuDAO;
 import com.example.qlynhansu.Entities.ChucVu;
 import com.example.qlynhansu.Repositories.ChucVuResporitory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 @Service
 public class ChucVuService implements ChucVuResporitory {
@@ -39,5 +39,4 @@ public class ChucVuService implements ChucVuResporitory {
 		
 		return chucvuDAO.XoaCV(macv);
 	}
-
 }

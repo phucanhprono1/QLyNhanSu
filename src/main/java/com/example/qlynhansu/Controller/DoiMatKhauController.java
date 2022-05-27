@@ -2,6 +2,8 @@ package com.example.qlynhansu.Controller;
 
 import javax.servlet.http.HttpSession;
 
+import com.example.qlynhansu.Entities.TaiKhoan;
+import com.example.qlynhansu.Services.TaiKhoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -10,8 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import Entities.TaiKhoan;
-import Services.TaiKhoanService;
 
 @Controller
 @RequestMapping("/doimatkhau")

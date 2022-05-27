@@ -2,6 +2,7 @@ package com.example.qlynhansu.Services;
 
 import java.sql.Date;
 import java.util.List;
+import java.util.Optional;
 
 import com.example.qlynhansu.DAO.NgayNghiDAO;
 import com.example.qlynhansu.Entities.NgayNghi;
@@ -9,9 +10,7 @@ import com.example.qlynhansu.Repositories.NgayNghiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import DAO.NgayNghiDAO;
-import Entities.NgayNghi;
-import Imp.NgayNghiImp;
+
 
 @Service
 public class NgayNghiService implements NgayNghiRepository {
@@ -36,7 +35,4 @@ public class NgayNghiService implements NgayNghiRepository {
 		
 		return ngaynghiDAO.XoaNgayNghi(mann);
 	}
-
-	
-
 }

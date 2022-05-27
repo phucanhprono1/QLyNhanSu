@@ -7,7 +7,7 @@ import com.example.qlynhansu.Entities.BangLuong;
 import org.springframework.data.repository.CrudRepository;
 
 
-public interface BangLuongRepository extends CrudRepository<BangLuong,String > {
+public interface BangLuongRepository {
 	
 	List<BangLuong> LayDanhLuong();
 

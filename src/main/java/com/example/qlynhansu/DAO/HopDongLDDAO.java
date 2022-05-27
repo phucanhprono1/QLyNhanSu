@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.util.List;
 
 import com.example.qlynhansu.Entities.HopDongLaoDong;
+import com.example.qlynhansu.Entities.NhanVien;
 import com.example.qlynhansu.Repositories.HopDongRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

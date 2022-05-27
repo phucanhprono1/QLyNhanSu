@@ -7,7 +7,7 @@ import com.example.qlynhansu.Entities.HopDongLaoDong;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface HopDongRepository extends CrudRepository<HopDongLaoDong,String> {
+public interface HopDongRepository {
 
 	List<HopDongLaoDong> LayDanhSachHD();
 	
