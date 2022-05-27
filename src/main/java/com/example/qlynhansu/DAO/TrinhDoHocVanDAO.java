@@ -1,10 +1,9 @@
 package com.example.qlynhansu.DAO;
 
 import java.util.List;
-import java.util.Optional;
 
-import com.example.qlynhansu.Entities.TrinhDoHocVan;
-import com.example.qlynhansu.Repositories.TrinhDoHocVanRepository;
+import com.example.qlynhansu.model.TrinhDoHocVan;
+import com.example.qlynhansu.repository.TrinhDoHocVanRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

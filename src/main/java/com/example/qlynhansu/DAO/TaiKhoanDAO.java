@@ -2,8 +2,8 @@ package com.example.qlynhansu.DAO;
 
 import java.util.List;
 
-import com.example.qlynhansu.Entities.TaiKhoan;
-import com.example.qlynhansu.Repositories.TaiKhoanRepository;
+import com.example.qlynhansu.model.TaiKhoan;
+import com.example.qlynhansu.repository.TaiKhoanRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +45,7 @@ public class TaiKhoanDAO implements TaiKhoanRepository {
 	@Transactional
 	public TaiKhoan LayTaiKhoan(String tentaikhoan) {
 		Session session = sessionFactory.getCurrentSession();
-		TaiKhoan TaiKhoan = (TaiKhoan) session.createQuery("from TaiKhoan where TenTaiKhoan='"+tentaikhoan+"'").getSingleResult();
+		TaiKhoan TaiKhoan = (TaiKhoan) session.createQuery("from TaiKhoan where username ='"+tentaikhoan+"'").getSingleResult();
 		return TaiKhoan;
 	}
 	

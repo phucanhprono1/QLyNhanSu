@@ -3,8 +3,8 @@ package com.example.qlynhansu.DAO;
 import java.sql.Date;
 import java.util.List;
 
-import com.example.qlynhansu.Entities.NgayNghi;
-import com.example.qlynhansu.Repositories.NgayNghiRepository;
+import com.example.qlynhansu.model.NgayNghi;
+import com.example.qlynhansu.repository.NgayNghiRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

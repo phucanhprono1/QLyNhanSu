@@ -2,8 +2,8 @@ package com.example.qlynhansu.DAO;
 
 import java.util.List;
 
-import com.example.qlynhansu.Entities.PhongBan;
-import com.example.qlynhansu.Repositories.PhongBanRepository;
+import com.example.qlynhansu.model.PhongBan;
+import com.example.qlynhansu.repository.PhongBanRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

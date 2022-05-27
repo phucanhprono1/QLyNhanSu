@@ -2,15 +2,14 @@ package com.example.qlynhansu.DAO;
 
 import java.util.List;
 
-import com.example.qlynhansu.Entities.BangLuong;
+import com.example.qlynhansu.model.BangLuong;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-import com.example.qlynhansu.Repositories.BangLuongRepository;
+import com.example.qlynhansu.repository.BangLuongRepository;
 
 @Repository
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)

@@ -1,7 +1,7 @@
 package com.example.qlynhansu.DAO;
 
-import com.example.qlynhansu.Entities.TaiKhoan;
-import com.example.qlynhansu.Repositories.DangKyRepository;
+import com.example.qlynhansu.model.TaiKhoan;
+import com.example.qlynhansu.repository.DangKyRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

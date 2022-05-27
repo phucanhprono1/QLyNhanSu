@@ -2,8 +2,8 @@ package com.example.qlynhansu.DAO;
 
 import java.util.List;
 
-import com.example.qlynhansu.Entities.ChucVu;
-import com.example.qlynhansu.Repositories.ChucVuResporitory;
+import com.example.qlynhansu.model.ChucVu;
+import com.example.qlynhansu.repository.ChucVuResporitory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

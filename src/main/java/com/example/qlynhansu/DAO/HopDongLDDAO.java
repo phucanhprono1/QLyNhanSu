@@ -3,9 +3,9 @@ package com.example.qlynhansu.DAO;
 import java.sql.Date;
 import java.util.List;
 
-import com.example.qlynhansu.Entities.HopDongLaoDong;
-import com.example.qlynhansu.Entities.NhanVien;
-import com.example.qlynhansu.Repositories.HopDongRepository;
+import com.example.qlynhansu.model.HopDongLaoDong;
+import com.example.qlynhansu.model.NhanVien;
+import com.example.qlynhansu.repository.HopDongRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
