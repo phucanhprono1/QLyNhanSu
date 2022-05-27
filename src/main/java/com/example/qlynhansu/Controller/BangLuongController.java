@@ -5,16 +5,16 @@ import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import com.example.qlynhansu.Entities.NgayNghi;
+import com.example.qlynhansu.Entities.NhanVien;
+import com.example.qlynhansu.Services.NgayNghiService;
+import com.example.qlynhansu.Services.NhanVienService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import Entities.NgayNghi;
-import Entities.NhanVien;
-import Services.NgayNghiService;
-import Services.NhanVienService;
 
 @Controller
 @RequestMapping("/bangluong")

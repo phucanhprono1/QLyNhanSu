@@ -3,6 +3,8 @@ package com.example.qlynhansu.DAO;
 import java.sql.Date;
 import java.util.List;
 
+import com.example.qlynhansu.Entities.HopDongLaoDong;
+import com.example.qlynhansu.Repositories.HopDongRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,13 +13,10 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import Entities.HopDongLaoDong;
-import Entities.NhanVien;
-import Imp.HopDongLDImp;
 
 @Repository
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class HopDongLDDAO implements HopDongLDImp{
+public class HopDongLDDAO implements HopDongRepository {
 	
 	@Autowired
 	SessionFactory sessionFactory;

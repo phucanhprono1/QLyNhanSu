@@ -2,6 +2,8 @@ package com.example.qlynhansu.DAO;
 
 import java.util.List;
 
+import com.example.qlynhansu.Entities.PhongBan;
+import com.example.qlynhansu.Repositories.PhongBanRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,11 +12,9 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import Entities.PhongBan;
-import Imp.PhongBanImp;
 @Repository
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class PhongBanDAO implements PhongBanImp{
+public class PhongBanDAO implements PhongBanRepository {
 	
 	@Autowired
 	SessionFactory sessionFactory;

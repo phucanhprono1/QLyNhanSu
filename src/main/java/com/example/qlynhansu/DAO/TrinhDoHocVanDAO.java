@@ -1,7 +1,10 @@
 package com.example.qlynhansu.DAO;
 
 import java.util.List;
+import java.util.Optional;
 
+import com.example.qlynhansu.Entities.TrinhDoHocVan;
+import com.example.qlynhansu.Repositories.TrinhDoHocVanRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,13 +13,9 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import Entities.PhongBan;
-import Entities.TrinhDoHocVan;
-import Imp.TrinhDoHocVanImp;
-
 @Repository
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class TrinhDoHocVanDAO implements TrinhDoHocVanImp {
+public class TrinhDoHocVanDAO implements TrinhDoHocVanRepository {
 	
 	@Autowired
 	SessionFactory sessionFactory;
@@ -86,7 +85,65 @@ public class TrinhDoHocVanDAO implements TrinhDoHocVanImp {
 			return null;
 		}
 	}
-	
-	
 
+
+	@Override
+	public <S extends TrinhDoHocVan> S save(S entity) {
+		return null;
+	}
+
+	@Override
+	public <S extends TrinhDoHocVan> Iterable<S> saveAll(Iterable<S> entities) {
+		return null;
+	}
+
+	@Override
+	public Optional<TrinhDoHocVan> findById(String s) {
+		return Optional.empty();
+	}
+
+	@Override
+	public boolean existsById(String s) {
+		return false;
+	}
+
+	@Override
+	public Iterable<TrinhDoHocVan> findAll() {
+		return null;
+	}
+
+	@Override
+	public Iterable<TrinhDoHocVan> findAllById(Iterable<String> strings) {
+		return null;
+	}
+
+	@Override
+	public long count() {
+		return 0;
+	}
+
+	@Override
+	public void deleteById(String s) {
+
+	}
+
+	@Override
+	public void delete(TrinhDoHocVan entity) {
+
+	}
+
+	@Override
+	public void deleteAllById(Iterable<? extends String> strings) {
+
+	}
+
+	@Override
+	public void deleteAll(Iterable<? extends TrinhDoHocVan> entities) {
+
+	}
+
+	@Override
+	public void deleteAll() {
+
+	}
 }

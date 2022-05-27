@@ -1,5 +1,7 @@
 package com.example.qlynhansu.DAO;
 
+import com.example.qlynhansu.Entities.TaiKhoan;
+import com.example.qlynhansu.Repositories.DangKyRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,13 +10,11 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import Entities.TaiKhoan;
-import Imp.DangNhapImp;
 
 
 @Repository
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class DangNhapDAO implements DangNhapImp {
+public class DangNhapDAO implements DangKyRepository {
 	
 	@Autowired
 	SessionFactory sessionFactory;
