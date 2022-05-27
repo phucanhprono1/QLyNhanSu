@@ -20,7 +20,7 @@
 					<div class="logo">
 						<figure>
 							<a href="/">
-								<img src="resources/static/images/logo.jpg" style="width: 210px">
+								<img src="resources/images/logo.jpg" style="width: 210px">
 							</a>
 						</figure>
 					</div>
@@ -111,57 +111,6 @@
 		</div>
 	</section>
 	<!-- end slider -->
-	
-
-	<!-- footer -->
-	<footer>
-		<div class="container">
-			<div class="row">
-				<!-- info -->
-				<div class="info">
-					<div class="title">
-						<h2>Địa chỉ liên hệ</h2>
-					</div>
-					<!-- address -->
-					<div class="address item">
-						<span class="icon">
-							<img src="resources/images/icon-map.png" width="8">
-						</span>
-						<span class="text">
-							Ninh Kiều, Cần Thơ
-						</span>
-					</div>
-
-					<!-- phone -->
-					<div class="phone item">
-						<span class="icon">
-							<img src="resources/images/icon-phone-footer.png" width="12">
-						</span>
-						<span class="text">
-							01643606417
-						</span>
-					</div>
-
-					<!-- for-us -->
-					<div class="email item">
-						<span class="icon">
-							<img src="resources/images/icon-email.png" width="12">
-						</span>
-						<span class="text">
-							huynhhuutrong.sd@gmail.com
-						</span>
-					</div>
-					<div class="item">
-						<span class="icon">
-							<img src="resources/images/icon-circle-i.png" width="12">
-						</span>
-						<span class="text">
-							07:00 - 22:00
-						</span>
-					</div>
-				</div>
-				<!-- end info -->
-
 				<!-- for-us -->
 				<div class="for-us">
 					<div class="title">
