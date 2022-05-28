@@ -46,8 +46,6 @@ public class NhanVien {
 	BangLuong bangluong;
 
 	Date ngayvaocongty;
-	String diemmanh;
-	String diemyeu;
 	
 	@OneToOne
 	@JoinColumn(name="matdhv")
@@ -178,18 +176,6 @@ public class NhanVien {
 	}
 	public void setNgayvaocongty(Date ngayvaocongty) {
 		this.ngayvaocongty = ngayvaocongty;
-	}
-	public String getDiemmanh() {
-		return diemmanh;
-	}
-	public void setDiemmanh(String diemmanh) {
-		this.diemmanh = diemmanh;
-	}
-	public String getDiemyeu() {
-		return diemyeu;
-	}
-	public void setDiemyeu(String diemyeu) {
-		this.diemyeu = diemyeu;
 	}
 	public Set<NgayNghi> getNgaynghi() {
 		return ngaynghi;

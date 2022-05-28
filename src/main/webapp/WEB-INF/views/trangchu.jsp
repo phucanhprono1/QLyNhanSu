@@ -49,11 +49,11 @@
 									<a href="dangnhap">Đăng nhập</a>
 								</span>
 							</li>
-<!-- 							<li class="item"> -->
-<!-- 								<span class="text">	 -->
-<!-- 									<a href="dangky">Đăng ký</a> -->
-<!-- 								</span> -->
-<!-- 							</li>		 -->
+ 							<li class="item">
+ 								<span class="text">
+ 									<a href="dangky">Đăng ký</a>
+ 								</span>
+							</li>
 								</c:otherwise>
 								</c:choose>
 						</ul>

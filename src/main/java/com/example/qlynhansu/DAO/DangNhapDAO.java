@@ -23,7 +23,7 @@ public class DangNhapDAO implements DangKyRepository {
 	public boolean DangNhap(String tentaikhoan, String matkhau) {
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			TaiKhoan taikhoan  =(TaiKhoan) session.createQuery("from TaiKhoan where TenTaiKhoan='"+tentaikhoan+"' and MatKhau='"+matkhau+"'").getSingleResult();
+			TaiKhoan taikhoan  =(TaiKhoan) session.createQuery("select*from TaiKhoan where username='"+tentaikhoan+"' and password='"+matkhau+"'").getSingleResult();
 			if(taikhoan != null) {
 				return true;
 			}else {
