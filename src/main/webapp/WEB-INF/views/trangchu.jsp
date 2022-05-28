@@ -15,16 +15,6 @@
 	<header>
 		<div class="container">
 			<div class="row">
-				<!-- logo -->
-				<div class="left">
-					<div class="logo">
-						<figure>
-							<a href="/">
-								<img src="resources/images/logo.jpg" style="width: 210px">
-							</a>
-						</figure>
-					</div>
-				</div>
 				<!-- end logo -->
 				<div class="right">
 					<!-- top-bar -->
@@ -94,51 +84,5 @@
 		</div>
 	</header>
 	<!-- end header -->
-	<!-- slider -->
-	<section id="slider">
-		<div class="wrap-slider">
-			<div class="wrap-img">
-				<figure class="item">
-					<img src="resources/images/slider3.jpg">
-				</figure>
-				<figure class="item">
-					<img src="resources/images/slider2.jpg">
-				</figure>
-				<figure class="item">
-					<img src="resources/images/slider1.png">
-				</figure>
-			</div>
-		</div>
-	</section>
-	<!-- end slider -->
-				<!-- for-us -->
-				<div class="for-us">
-					<div class="title">
-						<h2>Thông tin</h2>
-					</div>
-
-					<div class="item">
-						<div class="text">
-							<a href="#">Trang chủ</a>
-						</div>
-					</div>
-
-					<div class="item">
-						<div class="text">
-							<a href="#">Giới thiệu</a>
-						</div>
-					</div>
-					
-					
-				</div>
-				<!-- end for-us -->
-				
-				<!-- tags -->
-				
-				<!-- end tags -->
-			</div>
-		</div>
-	</footer>
-	<!-- end footer -->
 </body>
 </html>
