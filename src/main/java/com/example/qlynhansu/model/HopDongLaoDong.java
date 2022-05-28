@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-@Entity(name="HopDongLaoDong")
+@Entity(name="hop_dong_lao_dong")
 public class HopDongLaoDong {
 	
 	@Id

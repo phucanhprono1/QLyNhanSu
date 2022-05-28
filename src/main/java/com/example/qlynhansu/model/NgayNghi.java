@@ -15,7 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
-@Entity
+@Entity(name = "ngay_nghi")
 public class NgayNghi {
 
 	@Id
@@ -23,7 +23,7 @@ public class NgayNghi {
 	int mangaynghi;
 	Date ngaynghi;
 	@ManyToMany(fetch = FetchType.EAGER, cascade=CascadeType.PERSIST)
-	@JoinTable(name = "NgayNghiNhanVien", joinColumns = {
+	@JoinTable(name = "ngay_nghi_nhan_vien", joinColumns = {
 			@JoinColumn(name = "mangaynghi", referencedColumnName = "mangaynghi") }, inverseJoinColumns = {
 					@JoinColumn(name = "manv", referencedColumnName = "manv") })
 	Set<NhanVien> NhanVien;

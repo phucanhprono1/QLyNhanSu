@@ -1,105 +1,109 @@
-create table if not exists bangluong
+create table if not exists bang_luong
 (
-    maluong    varchar(8) not null
+    maluong    varchar(255) not null
         primary key,
-    tienphucap int        not null,
-    luongcoban int        not null
+    luongcoban int          not null,
+    tienphucap int          not null
 );
 
-create table if not exists chucvu
+create table if not exists chuc_vu
 (
-    macv   varchar(8)                not null
+    macv         varchar(255) not null
         primary key,
-    tencv  varchar(50) charset utf8  not null,
-    motacv varchar(100) charset utf8 not null
+    motacongviec varchar(255) null,
+    tencv        varchar(255) null
 );
 
-create table if not exists ngaynghi
+create table if not exists ngay_nghi
 (
-    mangaynghi int  not null
+    mangaynghi int auto_increment
         primary key,
     ngaynghi   date null
 );
 
-create table if not exists phongban
+create table if not exists phong_ban
 (
-    mapb  varchar(8)  not null
+    mapb  varchar(255) not null
         primary key,
-    tenpb varchar(50) not null,
-    sdtpb varchar(11) not null
+    sdtpb varchar(255) null,
+    tenpb varchar(255) null
 );
 
-create table if not exists trinhdohocvan
+create table if not exists trinh_do_hoc_van
 (
-    matdhv      varchar(8)  not null
+    matdhv      varchar(255) not null
         primary key,
-    tentdhv     varchar(20) not null,
-    chuyennganh varchar(30) not null
+    chuyennganh varchar(255) null,
+    tentdhv     varchar(255) null
 );
 
-create table if not exists nhanvien
+create table if not exists nhan_vien
 (
-    manv          varchar(8)                not null
+    manv            varchar(255) not null
         primary key,
-    anh           varchar(50) charset utf8  not null,
-    ho            varchar(30) charset utf8  null,
-    ten           varchar(30) charset utf8  not null,
-    ngaysinh      date                      not null,
-    quequan       varchar(200) charset utf8 not null,
-    diachitc      varchar(200) charset utf8 not null,
-    gioitinh      varchar(5) charset utf8   not null,
-    dantoc        varchar(20) charset utf8  not null,
-    sdt           varchar(11)               not null,
-    email         varchar(40) charset utf8  not null,
-    maphong       varchar(8)                not null,
-    macv          varchar(8)                not null,
-    ngayvaocongty date                      not null,
-    matdhv        varchar(8)                not null,
-    cmnd          varchar(12)               not null,
-    maluong       varchar(8)                not null,
-    constraint nhanvien_bangluong_maluong_fk
-        foreign key (maluong) references bangluong (maluong),
-    constraint nhanvien_chucvu_macv_fk
-        foreign key (macv) references chucvu (macv),
-    constraint nhanvien_phongban_mapb_fk
-        foreign key (maphong) references phongban (mapb),
-    constraint nhanvien_trinhdohocvan_matdhv_fk
-        foreign key (matdhv) references trinhdohocvan (matdhv)
+    anh             varchar(255) null,
+    bacluong        float        not null,
+    bacphucap       float        not null,
+    cmnd            varchar(255) null,
+    dantoc          varchar(255) null,
+    diachithuongtru varchar(255) null,
+    diemmanh        varchar(255) null,
+    diemyeu         varchar(255) null,
+    email           varchar(255) null,
+    gioitinh        varchar(255) null,
+    honv            varchar(255) null,
+    ngaysinh        date         null,
+    ngayvaocongty   date         null,
+    quequan         varchar(255) null,
+    sdt             varchar(255) null,
+    tennv           varchar(255) null,
+    maluong         varchar(255) null,
+    macv            varchar(255) null,
+    maphong         varchar(255) null,
+    matdhv          varchar(255) null,
+    constraint FK194l95o5jo8wd5cxs3g9h8i0a
+        foreign key (maluong) references bang_luong (maluong),
+    constraint FK8ntwry8d0b9jsh58q5fa270oa
+        foreign key (maphong) references phong_ban (mapb),
+    constraint FKlp0ixj95nymtvb4eor0q3plr
+        foreign key (macv) references chuc_vu (macv),
+    constraint FKrb2t95r7e2x5xlfunv9sjuqlb
+        foreign key (matdhv) references trinh_do_hoc_van (matdhv)
 );
 
-create table if not exists hopdonglaodong
+create table if not exists hop_dong_lao_dong
 (
-    mahopdong   varchar(8)               not null
+    mahopdong   varchar(255) not null
         primary key,
-    manv        varchar(8)               not null,
-    loaihopdong varchar(20) charset utf8 not null,
-    thoigian    int                      not null,
-    tungay      date                     not null,
-    denngay     date                     not null,
-    constraint hopdonglaodong_nhanvien_manv_fk
-        foreign key (manv) references nhanvien (manv)
+    denngay     date         null,
+    loaihopdong varchar(255) null,
+    thoigian    int          not null,
+    tungay      date         null,
+    manv        varchar(255) null,
+    constraint FK55b1mh8jrt7fouq7js4tjcxck
+        foreign key (manv) references nhan_vien (manv)
 );
 
-create table if not exists ngaynhanviennghi
+create table if not exists ngay_nghi_nhan_vien
 (
-    mangaynghi int        not null
-        primary key,
-    manv       varchar(8) not null,
-    constraint ngaynhanviennghi_ngaynghi_mangaynghi_fk
-        foreign key (mangaynghi) references ngaynghi (mangaynghi),
-    constraint ngaynhanviennghi_nhanvien_manv_fk
-        foreign key (manv) references nhanvien (manv)
+    manv       varchar(255) not null,
+    mangaynghi int          not null,
+    primary key (mangaynghi, manv),
+    constraint FKcu6cx2wwa955oey97pa1f8wiu
+        foreign key (manv) references nhan_vien (manv),
+    constraint FKfinqeapvof74f8vvhrdkl5kkw
+        foreign key (mangaynghi) references ngay_nghi (mangaynghi)
 );
 
-create table if not exists taikhoan
+create table if not exists tai_khoan
 (
-    username varchar(50) not null
+    tentaikhoan varchar(255) not null
         primary key,
-    password varchar(24) null,
-    manv     varchar(8)  not null,
-    quyen    varchar(30) null,
-    constraint taikhoan_nhanvien_manv_fk
-        foreign key (manv) references nhanvien (manv)
+    matkhau     varchar(255) null,
+    quyen       varchar(255) null,
+    manv        varchar(255) null,
+    constraint FK1ny8yw7np8c8mlg2aw7t3solu
+        foreign key (manv) references nhan_vien (manv)
 );
 
 

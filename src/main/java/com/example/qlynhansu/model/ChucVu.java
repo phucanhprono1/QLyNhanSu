@@ -3,7 +3,7 @@ package com.example.qlynhansu.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity(name="ChucVu")
+@Entity(name="chuc_vu")
 public class ChucVu {
 	@Id
 	String macv;

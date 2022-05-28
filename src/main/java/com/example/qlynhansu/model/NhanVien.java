@@ -16,7 +16,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
-@Entity(name="NhanVien")
+@Entity(name="nhan_vien")
 public class NhanVien {
 	@Id
 	String manv;
@@ -46,6 +46,8 @@ public class NhanVien {
 	BangLuong bangluong;
 
 	Date ngayvaocongty;
+	String diemmanh;
+	String diemyeu;
 	
 	@OneToOne
 	@JoinColumn(name="matdhv")
@@ -54,13 +56,13 @@ public class NhanVien {
 	String cmnd;
 	
 	@ManyToMany(fetch=FetchType.EAGER)
-	@JoinTable(name="NgayNghiNhanVien",
+	@JoinTable(name="ngay_nghi_nhan_vien",
 	joinColumns= {@JoinColumn(name="manv",referencedColumnName="manv")},
 	inverseJoinColumns= {@JoinColumn(name="mangaynghi",referencedColumnName="mangaynghi")})
 	Set<NgayNghi> ngaynghi;
 	
-	
-	
+
+
 	public float getBacluong() {
 		return bacluong;
 	}
@@ -176,6 +178,18 @@ public class NhanVien {
 	}
 	public void setNgayvaocongty(Date ngayvaocongty) {
 		this.ngayvaocongty = ngayvaocongty;
+	}
+	public String getDiemmanh() {
+		return diemmanh;
+	}
+	public void setDiemmanh(String diemmanh) {
+		this.diemmanh = diemmanh;
+	}
+	public String getDiemyeu() {
+		return diemyeu;
+	}
+	public void setDiemyeu(String diemyeu) {
+		this.diemyeu = diemyeu;
 	}
 	public Set<NgayNghi> getNgaynghi() {
 		return ngaynghi;
