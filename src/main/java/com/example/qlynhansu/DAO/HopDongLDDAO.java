@@ -26,7 +26,7 @@ public class HopDongLDDAO implements HopDongRepository {
 	public List<HopDongLaoDong> LayDanhSachHD() {
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			List<HopDongLaoDong> listHopDong = (List<HopDongLaoDong>) session.createQuery("from HopDongLaoDong").getResultList();
+			List<HopDongLaoDong> listHopDong = (List<HopDongLaoDong>) session.createQuery("from hop_dong_lao_dong ").getResultList();
 			return listHopDong;
 		} catch (Exception e) {
 			return null;
@@ -54,7 +54,7 @@ public class HopDongLDDAO implements HopDongRepository {
 	public HopDongLaoDong LayHD(String mahd) {
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			HopDongLaoDong hopdong = (HopDongLaoDong) session.createQuery("from HopDongLaoDong where mahopdong='"+mahd+"'").getSingleResult();
+			HopDongLaoDong hopdong = (HopDongLaoDong) session.createQuery("from hop_dong_lao_dong where mahopdong='"+mahd+"'").getSingleResult();
 			return hopdong;
 		} catch (Exception e) {
 			return null;
@@ -66,7 +66,7 @@ public class HopDongLDDAO implements HopDongRepository {
 	public HopDongLaoDong SuaHD(String mahd, String nhanvien, String loaihd, int thoigian, Date tungay, Date denngay) {
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			HopDongLaoDong hopdong = (HopDongLaoDong) session.createQuery("from HopDongLaoDong where mahopdong='"+mahd+"'").getSingleResult();
+			HopDongLaoDong hopdong = (HopDongLaoDong) session.createQuery("from hop_dong_lao_dong where mahopdong='"+mahd+"'").getSingleResult();
 			hopdong.setLoaihopdong(loaihd);
 			NhanVien nhanvien1 = new NhanVien();
 			nhanvien1.setManv(nhanvien);

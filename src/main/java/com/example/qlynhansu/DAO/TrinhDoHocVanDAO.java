@@ -23,7 +23,7 @@ public class TrinhDoHocVanDAO implements TrinhDoHocVanRepository {
 	public List<TrinhDoHocVan> LayDSTrinhDoHV() {
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			List<TrinhDoHocVan> listTrinhDoHV = (List<TrinhDoHocVan>) session.createQuery("from TrinhDoHocVan").getResultList();
+			List<TrinhDoHocVan> listTrinhDoHV = (List<TrinhDoHocVan>) session.createQuery("from trinh_do_hoc_van").getResultList();
 			return listTrinhDoHV;
 		} catch (Exception e) {
 			return null;

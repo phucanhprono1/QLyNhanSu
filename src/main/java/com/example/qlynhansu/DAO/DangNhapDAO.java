@@ -39,7 +39,7 @@ public class DangNhapDAO implements DangKyRepository {
 	public TaiKhoan LayTaiKhoan(String tentaikhoan, String matkhau) {
 		try {
 			Session session = sessionFactory.getCurrentSession();
-			TaiKhoan taikhoan  =(TaiKhoan) session.createQuery("from TaiKhoan where username ='"+tentaikhoan+"' and password ='"+matkhau+"'").getSingleResult();
+			TaiKhoan taikhoan  =(TaiKhoan) session.createQuery("from tai_khoan where tentaikhoan ='"+tentaikhoan+"' and matkhau ='"+matkhau+"'").getSingleResult();
 			return taikhoan;
 		} catch (Exception e) {
 			return null;

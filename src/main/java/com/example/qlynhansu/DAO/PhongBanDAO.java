@@ -23,7 +23,7 @@ public class PhongBanDAO implements PhongBanRepository {
 	public List<PhongBan> LayDanhSachPhongBan() {
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			List<PhongBan> listPhongBan = (List<PhongBan>) session.createQuery("from PhongBan").getResultList();
+			List<PhongBan> listPhongBan = (List<PhongBan>) session.createQuery("from phong_ban ").getResultList();
 			return listPhongBan;
 		} catch (Exception e) {
 			return null;

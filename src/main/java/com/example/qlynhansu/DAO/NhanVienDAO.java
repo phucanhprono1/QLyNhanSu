@@ -26,7 +26,7 @@ public class NhanVienDAO implements NhanVienRepository {
 	
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			List<NhanVien> listNhanVien = (List<NhanVien>) session.createQuery("from NhanVien").getResultList();
+			List<NhanVien> listNhanVien = (List<NhanVien>) session.createQuery("from nhan_vien ").getResultList();
 			return listNhanVien;
 		} catch (Exception e) {
 			return null;
@@ -53,7 +53,7 @@ public class NhanVienDAO implements NhanVienRepository {
 		
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			NhanVien nhanvien = (NhanVien) session.createQuery("from NhanVien where MaNV='"+manv+"'").getSingleResult();
+			NhanVien nhanvien = (NhanVien) session.createQuery("from nhan_vien where manv='"+manv+"'").getSingleResult();
 			return nhanvien;
 		} catch (Exception e) {
 			return null;
@@ -89,7 +89,7 @@ public class NhanVienDAO implements NhanVienRepository {
 			
 			
 		try {
-			NhanVien nhanvien = (NhanVien) session.createQuery("from NhanVien where manv='"+manv+"'").getSingleResult();
+			NhanVien nhanvien = (NhanVien) session.createQuery("from nhan_vien where manv='"+manv+"'").getSingleResult();
 			if(hinhanh != "") {
 			nhanvien.setAnh(hinhanh);
 			}

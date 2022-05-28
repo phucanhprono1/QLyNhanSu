@@ -23,7 +23,7 @@ public class TaiKhoanDAO implements TaiKhoanRepository {
 	public List<TaiKhoan> LayDanhTaiKhoan() {
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			List<TaiKhoan> listTaiKhoan = (List<TaiKhoan>) session.createQuery("from TaiKhoan").getResultList();
+			List<TaiKhoan> listTaiKhoan = (List<TaiKhoan>) session.createQuery("from tai_khoan ").getResultList();
 			return listTaiKhoan;
 		} catch (Exception e) {
 			return null;
@@ -45,7 +45,7 @@ public class TaiKhoanDAO implements TaiKhoanRepository {
 	@Transactional
 	public TaiKhoan LayTaiKhoan(String tentaikhoan) {
 		Session session = sessionFactory.getCurrentSession();
-		TaiKhoan TaiKhoan = (TaiKhoan) session.createQuery("from TaiKhoan where username ='"+tentaikhoan+"'").getSingleResult();
+		TaiKhoan TaiKhoan = (TaiKhoan) session.createQuery("from tai_khoan where tentaikhoan ='"+tentaikhoan+"'").getSingleResult();
 		return TaiKhoan;
 	}
 	
@@ -53,7 +53,7 @@ public class TaiKhoanDAO implements TaiKhoanRepository {
 	public TaiKhoan SuaTaiKhoan(String tentaikhoan, String matkhau, String quyen) {
 		Session session = sessionFactory.getCurrentSession();
 	try {
-		TaiKhoan taikhoan = (TaiKhoan) session.createQuery("from TaiKhoan where TenTaiKhoan='"+tentaikhoan+"'").getSingleResult();
+		TaiKhoan taikhoan = (TaiKhoan) session.createQuery("from tai_khoan where tentaikhoan='"+tentaikhoan+"'").getSingleResult();
 		taikhoan.setMatkhau(matkhau);
 		taikhoan.setQuyen(quyen);
 		session.update(taikhoan);
@@ -85,7 +85,7 @@ public class TaiKhoanDAO implements TaiKhoanRepository {
 	public TaiKhoan DoiMK(String tentaikhoan, String matkhau) {
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			TaiKhoan taikhoan = (TaiKhoan) session.createQuery("from TaiKhoan where TenTaiKhoan='"+tentaikhoan+"'").getSingleResult();
+			TaiKhoan taikhoan = (TaiKhoan) session.createQuery("from tai_khoan where tentaikhoan='"+tentaikhoan+"'").getSingleResult();
 			taikhoan.setMatkhau(matkhau);
 			session.update(taikhoan);
 			return taikhoan;

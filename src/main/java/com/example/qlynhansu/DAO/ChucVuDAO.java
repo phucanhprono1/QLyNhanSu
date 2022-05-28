@@ -24,7 +24,7 @@ public class ChucVuDAO implements ChucVuResporitory {
 	public List<ChucVu> LayDanhChucVu() {
 		Session session = sessionFactory.getCurrentSession();
 	try {
-		List<ChucVu> listChucVu = (List<ChucVu>) session.createQuery("from ChucVu").getResultList();
+		List<ChucVu> listChucVu = (List<ChucVu>) session.createQuery("from chuc_vu ").getResultList();
 		return listChucVu;
 	} catch (Exception e) {
 		return null;
@@ -53,7 +53,7 @@ public class ChucVuDAO implements ChucVuResporitory {
 		Session session = sessionFactory.getCurrentSession();
 		try {
 			
-			ChucVu chucvu = (ChucVu) session.createQuery("from ChucVu where macv='"+macv+"'").getSingleResult();
+			ChucVu chucvu = (ChucVu) session.createQuery("from chuc_vu where macv='"+macv+"'").getSingleResult();
 			return chucvu;
 		} catch (Exception e) {
 			return null;
@@ -66,7 +66,7 @@ public class ChucVuDAO implements ChucVuResporitory {
 	public ChucVu SuaCV(String macv, String tencv, String mota) {
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			ChucVu chucvu = (ChucVu) session.createQuery("from ChucVu where macv='"+macv+"'").getSingleResult();
+			ChucVu chucvu = (ChucVu) session.createQuery("from chuc_vu where macv='"+macv+"'").getSingleResult();
 			chucvu.setTencv(tencv);
 			chucvu.setMotacongviec(mota);
 			session.update(chucvu);

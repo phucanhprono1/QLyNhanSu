@@ -22,7 +22,7 @@ public class BangLuongDAO implements BangLuongRepository {
 		Session session = sessionFactory.getCurrentSession();
 		try {
 			
-			List<BangLuong> listBangLuong = (List<BangLuong>) session.createQuery("from BangLuong").getResultList();
+			List<BangLuong> listBangLuong = (List<BangLuong>) session.createQuery("from bang_luong ").getResultList();
 			return listBangLuong;
 			
 		} catch (Exception e) {

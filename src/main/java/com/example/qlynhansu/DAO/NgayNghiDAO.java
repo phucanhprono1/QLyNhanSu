@@ -24,7 +24,7 @@ public class NgayNghiDAO implements NgayNghiRepository {
 	public NgayNghi LayDanhSachNhanVien(Date ngaynghi) {
 		Session session = sessionFactory.getCurrentSession();
 		NgayNghi NgayNghi;
-		String sql = "from NgayNghi where ngaynghi='" + ngaynghi + "'";
+		String sql = "from ngay_nghi where ngaynghi='" + ngaynghi + "'";
 		try {
 			NgayNghi = (NgayNghi) session.createQuery(sql).getSingleResult();
 			return NgayNghi;
